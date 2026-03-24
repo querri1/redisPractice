@@ -1,5 +1,6 @@
 package com.mypractice.tset;
 
+import com.mypractice.jedis.util.JedisConnectionFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,8 @@ public class JedisTest {
 
     @BeforeEach
     void setUp() {
-        jedis = new Jedis("localhost", 6379);
+//        jedis = new Jedis("localhost", 6379);
+        jedis = JedisConnectionFactory.getJedis();
 
 //        jedis.auth("123456");
 
